@@ -34,6 +34,7 @@ __pycache__/
 # ML FILES
 # ======================
 
+catboost_info
 artifacts/
 *.pkl
 *.joblib

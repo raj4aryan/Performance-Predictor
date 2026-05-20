@@ -7,6 +7,7 @@ from sklearn.model_selection import train_test_split
 from dataclasses import dataclass
 
 from src.components.data_transformation import DataTransformation
+from src.components.model_trainer import ModelTrainer
 
 @dataclass
 class DataIngestionConfig:
@@ -47,4 +48,8 @@ if __name__ == "__main__":
     obj = DataIngestion()
     trainPath, testPath = obj.initiate_data_ingestion()
     transform = DataTransformation()
-    transform.initiate_data_transformation(trainPath, testPath)
+    train, test, _ = transform.initiate_data_transformation(trainPath, testPath)
+
+    modelTrainer = ModelTrainer()
+    modelName, score = modelTrainer.initiate_model_training(train, test)
+    print(f"Model: {modelName}, Accuracy: {score}")
