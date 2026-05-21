@@ -13,7 +13,8 @@ This project demonstrates how Machine Learning models can be integrated into a m
         ↓
 [ Python FastAPI ML Service ]
         ↓
-[ Scikit-learn Model ]```
+[ Scikit-learn Model ]
+```
 
 ## Features
 Modern React frontend UI for intuitive user interaction.
