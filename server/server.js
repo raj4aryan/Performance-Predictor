@@ -1,8 +1,11 @@
 const express = require("express");
+const cors = require("cors")
+const corsOptions = require('./config/corsOptions');
 const app = express();
 const PORT = process.env.PORT || 3500;
 const {logValid, logError} = require("./middleware/logger")
 
+app.use(cors(corsOptions))
 app.use(logValid)
 app.use(express.urlencoded({extended: false}))
 app.use(express.json())
