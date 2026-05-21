@@ -7,6 +7,7 @@ app.use(logValid)
 app.use(express.urlencoded({extended: false}))
 app.use(express.json())
 app.use("/", require("./Routes/root"))
+app.use("/predict", require("./Routes/api/predict"))
 
 app.use(logError)
 
